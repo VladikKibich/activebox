@@ -1,0 +1,331 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+*
+  margin: 0
+  padding: 0
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: $context
+  color: #ffffff
+html, body 
+     margin: 0
+     padding: 0
+     width: 100%
+html
+  overflow-x: hidden
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  font-family: $default-font
+  overflow-x: hidden
+  color: $text
+  input, textarea
+    border: #666 1px solid
+    outline: none
+    &:focus:required:invalid
+      border-color: red
+    &:required:valid
+      border-color: green
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+  &.img-width
+    width: 100%
+
+.text-center
+  text-align: center
+
+b, strong
+  font-weight: bold
+
+a
+  color: $accent
+  &:hover
+    text-decoration: none
+    color: darken($accent, 50%)
+ul, p, h1, h2, h3, h4, h5
+  margin: 0
+  list-style: none
+h1, h2, h3, h4, h5
+  color: $title
+.section
+  padding: 100px 0
+
+
+// START SSAS
+
+.banner
+  min-height: 750px
+  background: url(../img/header-bg.jpg) no-repeat 15% 15%
+  background-size: cover
+  .nav-top
+    ul
+      display: flex
+      justify-content: space-between
+      a
+        font-size: 13px
+        text-transform: uppercase
+        transition: ease .25s
+
+.header-top
+  display: flex
+  justify-content: space-around
+  width: 75%
+  margin: 0 auto
+  border-bottom: 1px solid #4f5168
+  padding: 40px 0
+  transition: padding .5s
+.fixed
+  position: fixed
+  width: 100%
+  background: #2a2e48
+  padding: 25px
+  transition: padding .5s
+  border-bottom: none
+  z-index: 999
+
+.banner
+  .header-content
+    margin: 150px auto
+    h1, p
+      text-align: center
+      color: $accent
+    h1
+      font-size: 65px
+      font-family: $secondary-font
+      text-transform: uppercase
+    p
+      font-size: 22px
+    .btn-header
+      margin: 75px auto
+      text-align: center
+      a
+        padding: 15px 40px
+        font-size: 13px
+        background: $context
+        text-transform: uppercase
+        transition: .25s
+        border-radius: 2px
+        &:hover
+          color: $accent
+          background: darken($context, 5%)
+
+.advantage
+  text-align: center
+  margin: $gutter 0
+  i
+    font-size: 60px
+    color: $context
+  h5
+    padding: $gutter 0
+    font-size: 14px
+    text-transform: uppercase
+    color: $title
+
+.portfolio__ul
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+
+.work
+  position: relative
+  padding: 0
+  overflow: hidden
+  background: transparent
+
+  a
+    // vertical-align: middle
+    display: block
+    transition: 0.65s
+    &:hover
+      transform: scale(1.1)
+      transition: 0.65s
+  .owerlay
+    position: absolute
+    top: 0
+    left: 0
+    background: rgba(232, 69, 69, 0.9)
+    height: 100%
+    width: 100%
+    opacity: 0
+    transition: 0.65s
+    &:hover
+      opacity: 1
+    .owerlay-cont
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      position: absolute
+      text-align: center
+      width: 100%
+      height: 100%
+      color: $accent
+      transition: 3s
+      opacity: 0
+      &:hover
+        opacity: 1
+      h3
+        color: $accent
+        font-weight: bold
+        text-transform: uppercase
+        font-size: 14px
+
+.team
+  h4, p
+    margin-top: $gutter
+  h4
+    font-size: 22px
+  h5
+    font-size: 13px
+    color: $context
+    text-transform: uppercase
+  p
+    font-size: 14px
+  ul
+    display: flex
+    i
+      margin-top: 15px
+      padding-right: 5px
+      color: #c6cacc
+      font-size: 35px
+      transition: .25s
+      &:hover
+        color: $title
+
+.testimonial
+  div
+    background: #53354a
+    padding: 0
+    blockquote
+      padding: 100px 15% 0
+      color: $accent
+      p
+        font-size: 36px
+        font-family: $cardo-font
+      cite
+        font-size: 13px
+        font-family: $default-font
+        font-weight: bold
+        text-transform: uppercase
+.download
+  margin: 0 auto
+  margin-top: 115px
+  text-align: center
+  h3
+    font-size: 28px
+    font-weight: 300
+  p
+    font-size: 13px
+    font-weight: bold
+    text-transform: uppercase
+    color: $title
+  .btn-download
+    margin: 0 auto
+    margin-top: 40px
+    a
+      padding: 15px 80px
+      font-size: 13px
+      background: $context
+      text-transform: uppercase
+      transition: .25s
+      border-radius: 2px
+      &:hover
+        color: $accent
+        background: darken($context, 5%)
+
+
+footer
+  background: #3a3e64
+  text-align: center
+  h5
+    color: $accent
+    font-size: 14px
+    font-weight: bold
+    text-transform: uppercase
+  p
+    color: $accent
+    font-size: 14px
+  ul
+    display: flex
+    justify-content: center
+    align-items: center
+    i
+      margin-top: 15px
+      padding: 0 10px
+      font-size: 35px
+      transition: .25s
+      &:hover
+        color: $context
+.footer-cont
+  padding-top: 70px
+  padding-bottom: 100px
+.coyright
+  padding: $gutter
+  background: #313454
+  p:first-child
+    color: #808080
+  i
+    color: $context
+    font-size: 12px
+
+
+
+.toggle-btn
+  display: none
+  position: fixed
+  margin: 1.4em
+  padding: 1em
+  width: 40px
+  height: 12px
+  right: 0
+  top: 1px
+  z-index: 1
+  span
+    .one
+    position: absolute
+    width: 40px
+    height: 2px
+    background: #fff
+  span.two
+    position: absolute
+    width: 40px
+    height: 2px
+    background: #fff
+    margin-top: 12px
+
+.menu
+  z-index: 1
+  position: fixed
+  background: #2a2e48
+  height: 100vh
+  width: 100%
+  top: -100%
+  .data
+    padding: 8em 0 0 2em
+    text-align: left
+    ul
+      list-style: none
+    li:first-child
+      color: grey
+      font-family: Poppins
+      font-size: 24px
+    li:not(:first-child)
+      color: #fff
+      font-size: 42px
+      a
+        text-decoration: none
+        color: #fff
+        font-family: Poppins
+
+@import "media" // Always at the end

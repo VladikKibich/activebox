@@ -1,0 +1,63 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+  .testimonial div blockquote
+    padding: 40px 5px 5px 5px
+    p
+      font-size: 32px
+// ≥992px
++media-breakpoint-down(md)
+  .nav-top
+    display: none
+
+  .toggle-btn
+    display: block
+
+  .team
+    text-align: center
+    div
+      margin-bottom: $gutter
+      img
+        margin: 0 auto
+    ul
+      justify-content: center
+
+  .testimonial div blockquote
+    padding: 10px 20px
+    text-align: center
+
+  .banner .header-content h1
+    font-size: 35px
+
+  footer
+    div
+      padding-bottom: 30px
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+  .download
+     .btn-download
+        a
+          padding-left: 70px
+          padding-right: 70px
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
